@@ -1,0 +1,129 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Service Website</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+  <style>
+    /* Custom Styles */
+    .hero {
+      background: #007bff;
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+    }
+    .services .card {
+      transition: transform 0.3s;
+    }
+    .services .card:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Client Services</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="{% url 'homepage' %}">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'services' %}">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'projects' %}">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'testimonials' %}">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container">
+      <h1>Welcome to Testimonials</h1>
+      <p>We pride ourselves in that we are helping real people problems with real world solution</p>
+      <a href="{% url 'testimonials' %}" class="btn btn-light">Explore Testiminials</a>
+    </div>
+  </header>
+
+  <!-- About Us Section -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <h2 class="text-center">About Us</h2>
+      <p class="text-center text-muted">We provide high-quality, reliable, and affordable web solutions tailored to your business needs.</p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">Our Services</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card p-4">
+            <h5 class="card-title">Web Development</h5>
+            <p class="card-text">Responsive and modern websites to enhance your online presence.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-4">
+            <h5 class="card-title">E-commerce Solutions</h5>
+            <p class="card-text">Customized online stores to grow your business.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-4">
+            <h5 class="card-title">Consulting</h5>
+            <p class="card-text">Expert guidance for your digital transformation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="text-center">Contact Us</h2>
+      <p class="text-center text-muted">Get in touch with us for more information</p>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form action="/send-message" method="POST">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 Client Services | All Rights Reserved</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
