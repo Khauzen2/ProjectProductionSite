@@ -268,6 +268,14 @@ body {
   height: 150px;
 }
 
+.client-img {
+  width: 150px; /* Adjust to desired size */
+  height: 150px;
+  object-fit: cover; /* Crops the image to fit the dimensions without distortion */
+  border-radius: 50%; /* Makes the image circular, optional */
+}
+
+
 .footer {
   background-color: #343a40;
   color: white;
