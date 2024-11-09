@@ -42,63 +42,17 @@
     <div class="container mt-5">
         <h2 class="section-title">Client Testimonials</h2>
         <div class="row">
+            {% for testimonial in testimonials %}
             <div class="col-md-4 mb-4">
                 <div class="testimonial-card">
-                    <img src="{% static 'images/ManT-shirtDarkBlue.png' %}" class="client-img" alt="Client 1">
+                    <img src="{{ testimonial.image_path }}" class="client-img" alt="A Client">
                     <div class="testimonial-content">
-                        <p class="testimonial-text">"This company provided excellent service! Highly recommend to anyone looking for quality!"</p>
-                        <h5 class="client-name">- John Doe</h5>
+                        <p class="testimonial-text">"{{ testimonial.comment }}"</p>
+                        <h5 class="client-name">- {{ testimonial.client }}</h5>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
-                <div class="testimonial-card">
-                    <img src="{% static 'images/ManT-shirtGray.png' %}" class="client-img" alt="Client 2">
-                    <div class="testimonial-content">
-                        <p class="testimonial-text">"A truly wonderful experience. The team was professional and attentive!"</p>
-                        <h5 class="client-name">- Jane Smith</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="testimonial-card">
-                    <img src="{% static 'images/ManT-shirtGreen.jpg' %}" width="200px" height="220px" class="client-img" alt="Client 3">
-                    <div class="testimonial-content">
-                        <p class="testimonial-text">"Fantastic service and great results. Will definitely be back!"</p>
-                        <h5 class="client-name">- Sarah Johnson</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="testimonial-card">
-                    <img src="{% static 'images/ManT-shirtSmokedWhiteRush.png' %}" class="client-img" alt="Client 4">
-                    <div class="testimonial-content">
-                        <p class="testimonial-text">"Professional and prompt. Exceeded my expectations!"</p>
-                        <h5 class="client-name">- Michael Brown</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="testimonial-card">
-                    <img src="{% static 'images/ManT-shirtWhite.png' %}" class="client-img" alt="Client 5">
-                    <div class="testimonial-content">
-                        <p class="testimonial-text">"I am extremely satisfied with the outcome. Highly recommend!"</p>
-                        <h5 class="client-name">- Emily Davis</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="testimonial-card">
-                    <img src="{% static 'images/ManT-shirtYellow.png' %}" class="client-img" alt="Client 6">
-                    <div class="testimonial-content">
-                        <p class="testimonial-text">"Great service! The team was very helpful and knowledgeable."</p>
-                        <h5 class="client-name">- Chris Wilson</h5>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 
