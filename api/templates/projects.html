@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,25 +12,26 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <title>My Projects</title>
 </head>
+
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <a class="navbar-brand" href="#">Client Services</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="{% url 'homepage' %}">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="{% url 'services' %}">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="{% url 'projects' %}">Projects</a></li>
-            <li class="nav-item"><a class="nav-link" href="{% url 'testimonials' %}">Testimonials</a></li>
-            <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
-          </ul>
+        <div class="container">
+            <a class="navbar-brand" href="#">Client Services</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'services' %}">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'projects' %}">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'testimonials' %}">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </div>
         </div>
-      </div>
     </nav>
 
     <header class="hero">
@@ -41,37 +43,38 @@
 
     <div class="container mt-5">
         <h2 class="section-title">Featured Projects</h2>
-        
+
         <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="{% static 'images/TheBullSauceSiteImage.png' %}" class="card-img-top" alt="Project 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Project 1</h5>
-                        <p class="card-text">A brief description of what Project 1 is about.</p>
-                        <a href="#" class="btn btn-primary">View Details</a>
-                    </div>
+            <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    {% for n in carasoul_indicators %}
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="{{n}}"
+                        aria-label="Slide {{n}}"></button>
+                    {% endfor %}
                 </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="{% static 'images/nkanyisoMusicSiteImage.png' %}" class="card-img-top" alt="Project 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Project 2</h5>
-                        <p class="card-text">A brief description of what Project 2 is about.</p>
-                        <a href="#" class="btn btn-primary">View Details</a>
+                <div class="carousel-inner">
+                    {% for project in featured_projects %}
+                    <div class="carousel-item active">
+                        <img src="{{ project.image_path }}" class="d-block w-100" alt="{{ project.name }}">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50">
+                            <h5>{{ project.name }}</h5>
+                            <p>{{ project.brief_description }}</p>
+                            <a href="{{ project.entry_name }}" class="btn btn-primary">View Details</a>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="{% static 'images/MsesiWebsite.png' %}" class="card-img-top" alt="Project 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Project 3</h5>
-                        <p class="card-text">A brief description of what Project 3 is about.</p>
-                        <a href="#" class="btn btn-primary">View Details</a>
-                    </div>
-                </div>
+                    {% endfor %}
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
         <h2 class="section-title mt-5">More Projects</h2>
@@ -101,4 +104,5 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
