@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 /* Reset some basic elements 
 body, h1, h2, h3, p {
     margin: 0;
@@ -194,20 +194,13 @@ body, h1, h2, h3, p {
   /* static/css/style.css */
 
 body {
-  background-color: #f8f9fa;
-  font-family: Arial, sans-serif;
-=======
-body {
   background-color: #ffffff;
   font-family: Arial, sans-serif;
   color: #333333;
->>>>>>> 480dc79 (Updating more tech)
   margin: 0;
   padding: 0;
 }
 
-<<<<<<< HEAD
-=======
 /* Light Mode (default) */
 
 /*.mode-switch {
@@ -237,7 +230,6 @@ body.dark-mode .project-card {
   color: white;
 }
 
->>>>>>> 480dc79 (Updating more tech)
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -250,17 +242,10 @@ body.dark-mode .project-card {
   display: grid;
 }
 
-<<<<<<< HEAD
 /*Navbar*/ 
 .navbar {
   padding: 1rem 2rem;
   background-color: #212529;
-=======
-/*Navbar*/
-.navbar {
-  padding: 1rem 2rem;
-  background-color: #ffffff;
->>>>>>> 480dc79 (Updating more tech)
 }
 
 .navbar-nav {
@@ -269,14 +254,14 @@ body.dark-mode .project-card {
   align-items: center;
 }
   
-<<<<<<< HEAD
+
 .navbar-brand {
   font-weight: bold;
   color: #fff !important;
-=======
+}
+
 img .navbar-brand {
   border-radius: 20px;
->>>>>>> 480dc79 (Updating more tech)
 }
   
 .navbar-nav .nav-link {
@@ -290,11 +275,7 @@ img .navbar-brand {
 }
 
 .hero {
-<<<<<<< HEAD
-  background-image: url('55-on-main-6_vlvv.png'); /* Use a relative URL if the image is in static */
-=======
   background-image: url('homepageImage.jpeg'); /* Use a relative URL if the image is in static */
->>>>>>> 480dc79 (Updating more tech)
   background-size: cover;
   background-position: center;
   height: 60vh;
@@ -310,8 +291,6 @@ img .navbar-brand {
   font-weight: bold;
 }
 
-<<<<<<< HEAD
-=======
 .aboutpage-hero {
   background-image: url('AfriologyAboutImage.jpeg');
   background-size: cover;
@@ -372,7 +351,6 @@ img .navbar-brand {
   text-align: center;
 }
 
->>>>>>> 480dc79 (Updating more tech)
 .section-title {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -400,8 +378,6 @@ img .navbar-brand {
   border-radius: 50%; /* Makes the image circular, optional */
 }
 
-<<<<<<< HEAD
-
 .footer {
   background-color: #343a40;
   color: white;
@@ -409,7 +385,6 @@ img .navbar-brand {
   text-align: center;
 }
 
-=======
 /* Smooth fade-in effect for main elements */ 
 .fade-in {
   opacity: 0;
@@ -545,8 +520,6 @@ img .navbar-brand {
   margin: 0;
 }
 
-
->>>>>>> 480dc79 (Updating more tech)
 /* Style adjustments for tablets (between 600px and 900px) */
 @media (max-width: 900px) {
   .container {
@@ -572,11 +545,4 @@ img .navbar-brand {
       text-align: center;
   }
 }
-<<<<<<< HEAD
-=======
-  
-
-
-  
->>>>>>> 480dc79 (Updating more tech)
   
