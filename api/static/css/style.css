@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Reset some basic elements 
 body, h1, h2, h3, p {
     margin: 0;
@@ -195,10 +196,48 @@ body, h1, h2, h3, p {
 body {
   background-color: #f8f9fa;
   font-family: Arial, sans-serif;
+=======
+body {
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+  color: #333333;
+>>>>>>> 480dc79 (Updating more tech)
   margin: 0;
   padding: 0;
 }
 
+<<<<<<< HEAD
+=======
+/* Light Mode (default) */
+
+/*.mode-switch {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+/* Dark Mode Styles
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+/* Customize any specific elements for dark mode 
+body.dark-mode .project-card {
+  background-color: #333333;
+  color: #e0e0e0;
+}*/
+
+.activate {
+  text-decoration: underline;
+  color: white;
+}
+
+>>>>>>> 480dc79 (Updating more tech)
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -211,10 +250,17 @@ body {
   display: grid;
 }
 
+<<<<<<< HEAD
 /*Navbar*/ 
 .navbar {
   padding: 1rem 2rem;
   background-color: #212529;
+=======
+/*Navbar*/
+.navbar {
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+>>>>>>> 480dc79 (Updating more tech)
 }
 
 .navbar-nav {
@@ -223,9 +269,14 @@ body {
   align-items: center;
 }
   
+<<<<<<< HEAD
 .navbar-brand {
   font-weight: bold;
   color: #fff !important;
+=======
+img .navbar-brand {
+  border-radius: 20px;
+>>>>>>> 480dc79 (Updating more tech)
 }
   
 .navbar-nav .nav-link {
@@ -239,7 +290,11 @@ body {
 }
 
 .hero {
+<<<<<<< HEAD
   background-image: url('55-on-main-6_vlvv.png'); /* Use a relative URL if the image is in static */
+=======
+  background-image: url('homepageImage.jpeg'); /* Use a relative URL if the image is in static */
+>>>>>>> 480dc79 (Updating more tech)
   background-size: cover;
   background-position: center;
   height: 60vh;
@@ -255,6 +310,69 @@ body {
   font-weight: bold;
 }
 
+<<<<<<< HEAD
+=======
+.aboutpage-hero {
+  background-image: url('AfriologyAboutImage.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.servicespage-hero {
+  background-image: url('AfriologyServiceImage.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.projectspage-hero {
+  background-image: url('AfriologyProjectsImage.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.testimonialspage-hero {
+  background-image: url('AfriologyTestimonialsImage.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contactpage-hero {
+  background-image: url('AfriologyContactImage.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+>>>>>>> 480dc79 (Updating more tech)
 .section-title {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -282,6 +400,7 @@ body {
   border-radius: 50%; /* Makes the image circular, optional */
 }
 
+<<<<<<< HEAD
 
 .footer {
   background-color: #343a40;
@@ -290,6 +409,144 @@ body {
   text-align: center;
 }
 
+=======
+/* Smooth fade-in effect for main elements */ 
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInAnimation 1s ease-in forwards;
+}
+
+/* Animation keyframes */
+@keyframes fadeInAnimation {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Testimonials Section */
+.container.mt-5.fade-in {
+  padding: 2em 0;
+  text-align: center;
+}
+
+.section-title {
+  margin-bottom: 1.5em;
+  font-size: 2rem;
+  color: #333;
+}
+
+.testimonial-card {
+  padding: 1.5em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.client-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 1em;
+}
+
+.testimonial-content {
+  font-style: italic;
+  color: #555;
+}
+
+.client-name {
+  margin-top: 1em;
+  font-weight: bold;
+  color: #333;
+}
+
+.carousel-item .testimonial-card {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #333;
+  border-radius: 50%;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  margin: 20px;
+}
+
+.footer-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-section ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #ddd;
+}
+
+/* Social Icons */
+.social-icons a {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ddd;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid #555;
+  padding-top: 20px;
+  font-size: 0.9rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+
+>>>>>>> 480dc79 (Updating more tech)
 /* Style adjustments for tablets (between 600px and 900px) */
 @media (max-width: 900px) {
   .container {
@@ -315,4 +572,11 @@ body {
       text-align: center;
   }
 }
+<<<<<<< HEAD
+=======
+  
+
+
+  
+>>>>>>> 480dc79 (Updating more tech)
   

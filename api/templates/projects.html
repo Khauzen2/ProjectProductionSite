@@ -18,6 +18,8 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#">Client Services</a>
+            <!--<a class="navbar-brand" href="#">Client Services</a>-->
+            <img class="navbar-brand" src="{% static 'images/Afriologylogo.jpeg' %}" alt="com logo" width="200" height="140">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -27,23 +29,22 @@
                     <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'services' %}">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'projects' %}">Projects</a></li>
+                    <li class="nav-item activate"><a class="nav-link" href="{% url 'projects' %}">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'testimonials' %}">Testimonials</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-
-    <header class="hero">
-        <div>
+    <header class="projectspage-hero">
+        <div class="fade-in">
             <h1>My Projects</h1>
             <p>Explore the amazing projects I have worked on!</p>
         </div>
     </header>
 
-    <div class="container mt-5">
+    <div class="container mt-5 fade-in">
         <h2 class="section-title">Featured Projects</h2>
-
         <div class="row">
             <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div class="carousel-indicators">
@@ -79,6 +80,8 @@
         </div>
         <h2 class="section-title mt-5">More Projects</h2>
         <ul class="list-unstyled">
+        <h2 class="section-title mt-5 fade-in">More Projects</h2>
+        <ul class="list-unstyled fade-in">
             <li>
                 <h5>Project 4</h5>
                 <p>A brief description of Project 4.</p>
@@ -96,8 +99,51 @@
             </li>
         </ul>
     </div>
+    
+    <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2024 My Website. All Rights Reserved.</p>
+        <div class="footer-container">
+          <img class="navbar-brand" src="{% static 'images/Afriologylogo.jpeg' %}" alt="com logo" width="200" height="140">
+          <!-- Quick Links -->
+          <div class="footer-section quick-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="{% url 'homepage' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About Us</a></li>
+                <li><a href="{% url 'services' %}">Services</a></li>
+                <li class="activate"><a href="{% url 'projects' %}">Projects</a></li>
+                <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+          </div>
+  
+          <div class="footer-section">
+            <h4>My Projects</h4>
+            <ul>
+                <li><a href="https://khauzen2.github.io/TheBullSauce" target="_blank">The Bull Sauce</a></li>
+                <li><a href="https://nfgempela.com" target="_blank">NFK Ngempela</a></li>
+                <li><a href="https://monicafurniture.com" target="_blank">Monica & Partner</a></li>
+                <li><a href="https://mycardealership.com" target="_blank">My Car Dealership</a></li>
+                <li><a href="https://msesisanitary.com" target="_blank">Msesi's Pantyliners</a></li>
+            </ul>
+          </div>
+  
+          <div class="footer-section social-icons">
+            <h4>Contact Me</h4>
+            <p>Email: <a href="mailto:kmavics@gmail.com">kmavics@gmail.com</a></p>
+            <p>Phone: <a href="tel:+27677608821">+27 67 760 8821</a></p>
+            <p>Follow my social links:
+                <a href="https://linkedin.com/in/khaolani-michael-mavimbela-bb45b1232" target="_blank">LinkedIn</a> | 
+                <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a> | 
+                <a href="https://github.com/Khauzen2" target="_blank">GitHub</a>
+            </p>
+          </div>
+        </div>  
+  
+        <div class="footer-bottom">
+          <p>&copy; 2024 Afriology Software Technologies.</p>
+        </div>
+        
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
