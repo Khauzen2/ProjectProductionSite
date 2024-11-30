@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'api',
     'corsheaders',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -132,3 +133,11 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Redirect URLs
+LOGIN_REDIRECT_URL = '/'  # Redirect to the homepage after login
+LOGOUT_REDIRECT_URL = '/'  # Redirect to the homepage after logout
+
+# Custom User Model (if applicable)
+# AUTH_USER_MODEL = 'your_app.CustomUser'  # Uncomment if using a custom user model
+

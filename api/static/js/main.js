@@ -39,6 +39,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+$('a').on('click', function(e) {
+    e.preventDefault(); // This stops the default action
+});
+
 console.log("JavaScript file is loaded!");
 
 

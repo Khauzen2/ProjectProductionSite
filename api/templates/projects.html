@@ -29,6 +29,7 @@
                     <li class="nav-item activate"><a class="nav-link" href="{% url 'projects' %}">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'testimonials' %}">Testimonials</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+                    <li class="nav-item activate activate"><a class="nav-link" href="{% url 'dashboard' %}">{{ user.username }}'s board</a></li>
                 </ul>
             </div>
         </div>
@@ -75,8 +76,6 @@
                 </button>
             </div>
         </div>
-        <h2 class="section-title mt-5">More Projects</h2>
-        <ul class="list-unstyled">
         <h2 class="section-title mt-5 fade-in">More Projects</h2>
         <ul class="list-unstyled fade-in">
             <li>

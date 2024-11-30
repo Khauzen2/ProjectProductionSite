@@ -1,11 +1,54 @@
 # client_service_website/views.py
 
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 import os, json
 from pathlib import Path
+# Login
+from django.contrib.auth import login, authenticate
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.decorators import login_required
+from .forms import CustomUserCreationForm, CustomAuthenticationForm
+
+from django.contrib import messages
+from .forms import RegistrationForm
+
+def register(request):
+    if request.method == "POST":
+        form = RegistrationForm(request.POST)
+        if form.is_valid():
+            print("Form is valid!")  # Debugging statement
+            form.save()
+            messages.success(request, "Account created successfully!")
+            return redirect("login")  # Redirect to login page after successful registration
+        else:
+            print("Form errors:", form.errors)  # Debugging statement
+            messages.error(request, "Please correct the errors below.")
+    else:
+        form = RegistrationForm()
+
+    context = {"form": form}
+    return render(request, "register.html", context)
+
+# Login View
+def login_view(request):
+    if request.method == 'POST':
+        form = CustomAuthenticationForm(data=request.POST)
+        if form.is_valid():
+            user = form.get_user()
+            login(request, user)
+            return redirect('dashboard')  # Redirect to homepage or dashboard
+    else:
+        form = CustomAuthenticationForm()
+    return render(request, 'login.html', {'form': form})
+
+# Protected Page Example
+@login_required
+def dashboard(request):
+    return render(request, 'dashboard.html')
 
 def homepage(request):
-    return render(request, 'homepage.html')  # Render a homepage template
+    if request.user.is_authenticated:   
+        return render(request, 'homepage.html')  # Render a homepage template
 
 def about(request):
     return render(request, 'about.html')

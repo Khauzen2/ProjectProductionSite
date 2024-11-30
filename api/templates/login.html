@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/users.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Login to Your Account</h1>
+        <form method="POST" action="{% url 'login' %}">
+            {% csrf_token %}
+            <label for="username">Username or Email</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Login</button>
+        </form>
+        <p>Enter without login <a href="{% url 'homepage' %}">Enter</a></p>
+        <p>Don't have an account? <a href="{% url 'register' %}">Register here</a>.</p>
+    </div>
+</body>
+</html>

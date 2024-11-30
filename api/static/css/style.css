@@ -193,6 +193,12 @@ body, h1, h2, h3, p {
 
   /* static/css/style.css */
 
+a {
+  pointer-events: auto; /* Ensure links are clickable */
+  z-index: 10; /* Adjust to make it on top */
+}
+
+
 body {
   background-color: #ffffff;
   font-family: Arial, sans-serif;

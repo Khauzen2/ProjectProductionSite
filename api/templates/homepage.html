@@ -24,12 +24,19 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
+          {% if user.is_authenticated %}
             <li class="nav-item activate"><a class="nav-link" href="{% url 'homepage' %}">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
             <li class="nav-item"><a class="nav-link" href="{% url 'services' %}">Services</a></li>
             <li class="nav-item"><a class="nav-link" href="{% url 'projects' %}">Projects</a></li>
             <li class="nav-item"><a class="nav-link" href="{% url 'testimonials' %}">Testimonials</a></li>
             <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+          {% else %}
+            
+            <li class="nav-item"><a class="nav-link" href="{% url 'register' %}">Register</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">login</a></li>
+            <li class="nav-item activate"><a class="nav-link" href="{% url 'dashboard' %}">{{ user.username }}'s board</a></li>
+          {% endif %}  
           </ul>
         </div>
       </div>
@@ -37,8 +44,9 @@
 
     <header class="hero">
         <div class="fade-in">
-            <h1>Welcome to Afriology Software Technologies</h1>
-            <p>African Technology for the whole world at its best</p>
+
+          <h1>Welcome to Afriology Software Technologies, {{ user.username}}</h1>
+          <p>African Technologies for the whole world at its best</p>
         </div>
     </header>
   
